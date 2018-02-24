@@ -84,8 +84,6 @@ export class GameService {
 					this.x, this.y,
 					randomVehicle.width, randomVehicle.height
 				);
-				context.strokeRect(this.x, this.y, randomVehicle.width, randomVehicle.height);
-
 			};
 		});
 	}
@@ -136,8 +134,6 @@ export class GameService {
 			this.player.x, this.player.y,
 			CONFIG.playerCar.width, CONFIG.playerCar.height,
 		);
-		this.context.strokeRect(this.player.x, this.player.y,
-			CONFIG.playerCar.width, CONFIG.playerCar.height);
 	}
 
 	detectCrash(obstacle: Obstacles ): void {
