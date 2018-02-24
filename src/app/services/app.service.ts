@@ -1,15 +1,20 @@
-import { Injectable, Input } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { GameService } from './game.service';
 
 @Injectable()
 export class AppService {
 
+	isImageLoaded: EventEmitter<number> = new EventEmitter();
 	constructor(private gameService: GameService) { }
 
 	createPlayGround(canvasElement): void {
 		this.gameService.loadAssets(canvasElement).then( (image) => {
-			this.gameService.startGameLoop();
+			this.isImageLoaded.emit();
 		});
+	}
+
+	getImageLoadEmitter() {
+		return this.isImageLoaded;
 	}
 
 	movePlayer(event: KeyboardEvent, type: string): void {
