@@ -1,4 +1,4 @@
-#Car Racing game using Angular
+# Car Racing game using Angular
 
 A Car Racing game using Angular with Crash detection feature.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
