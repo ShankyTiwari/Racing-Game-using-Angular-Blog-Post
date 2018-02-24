@@ -1,0 +1,18 @@
+.instructions{
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+    width: 154px;
+    padding: 5px;
+    color: white;
+    background: #000;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.play-ground{
+    display: grid;
+    margin: auto;
+    background-color: #ddd;
+}
+
