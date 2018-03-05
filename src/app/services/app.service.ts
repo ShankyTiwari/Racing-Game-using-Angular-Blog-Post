@@ -9,7 +9,9 @@ export class AppService {
 
 	createPlayGround(canvasElement): void {
 		this.gameService.loadAssets(canvasElement).then( (image) => {
-			this.isImageLoaded.emit();
+      setTimeout( () =>{
+        	this.isImageLoaded.emit();
+      },1000);
 		});
 	}
 
