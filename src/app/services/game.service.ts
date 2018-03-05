@@ -33,8 +33,9 @@ export class GameService {
 			this.image = new Image();
 			this.image.src = CONFIG.spritePath;
 			this.image.width = 58;
-			this.image.height = 128;
-			resolve();
+			this.image.height = 128;this.image.onload = () => {
+        resolve();
+      };
 		});
 	}
 
